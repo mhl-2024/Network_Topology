@@ -171,4 +171,4 @@ branchangle = jundf.groupby('outletNHDid').agg(
 Network_angles=sideangle.merge(biangle,on='outletNHDid',how='inner')
 Network_angles=Network_angles.merge(branchangle,on='outletNHDid',how='inner')
 
-Network_angles.to_csv('Network_angles.csv',index=False)
+Network_angles.to_csv('JunctionAngles.csv',index=False)

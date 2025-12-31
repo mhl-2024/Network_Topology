@@ -415,7 +415,7 @@ def main():
                  color=palette3[2], markeredgecolor='black', label='Side-branching', capsize=4)
     ax1.set_xlim(0.9, 4.6)
     ax1.tick_params(labelbottom=False) 
-    ax1.set_ylabel('Mean angle [°]', fontsize=36,labelpad=19)
+    ax1.set_ylabel('Mean angle [°]', fontsize=36,labelpad=16)
     ax1.tick_params(labelsize=size0, direction='in', width=1, length=8, pad=10)
     ax1.spines['bottom'].set_linewidth(boxwidth)
     ax1.spines['left'].set_linewidth(boxwidth)
@@ -513,7 +513,7 @@ def main():
     ax4.set_xlabel('H-S order difference k', fontsize=36)
     ax4.set_yticks([45, 90])
 
-    ax4.set_ylabel('Mean angle [°]', fontsize=36,labelpad=18)
+    ax4.set_ylabel('Mean angle [°]', fontsize=36,labelpad=16)
     ax4.yaxis.set_label_position("right")
     ax4.yaxis.tick_right()
     ax4.tick_params(labelsize=size0, direction='in', width=1, length=8, pad=10)
@@ -655,5 +655,6 @@ def main():
     
 if __name__ == '__main__':
     main()
+
 
 

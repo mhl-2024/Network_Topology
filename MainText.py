@@ -273,7 +273,7 @@ def ecdfplot(dfplot, classname, num_classes, bin_values, plotfield):
 def main():
     # -----------Load data------------
     
-    infolder = r'U:\fromHardDisk\Tokunaga\Manuscript\NC\NC_revision_round1_20251020\Submission\Code_and_Dataset'
+    infolder = 'inputfolder'
     hex10000 = gpd.read_file(os.path.join(infolder,'hex10000.gpkg'))
     Tk =  pd.read_csv(os.path.join(infolder,'Network_attributes.csv'))    
     Tk_angles = pd.read_csv(os.path.join(infolder,'Classified_angles_vs_Tk_c.csv'))
@@ -655,4 +655,5 @@ def main():
     
 if __name__ == '__main__':
     main()
+
 

@@ -1,10 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Sat Feb 17 17:09:43 2024
-
-@author: minhli
-"""
-
 
 import geopandas as gpd
 import pandas as pd
@@ -172,4 +166,5 @@ Network_angles=sideangle.merge(biangle,on='outletNHDid',how='inner')
 Network_angles=Network_angles.merge(branchangle,on='outletNHDid',how='inner')
 
 Network_angles.to_csv('JunctionAngles.csv',index=False)
+
 

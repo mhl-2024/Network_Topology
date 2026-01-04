@@ -119,7 +119,7 @@ orderfield='StreamOrde'
 infolder = ''
 
 #========= S1. read the big network =================
-df=gpd.read_file(os.path.join(infolder,'NHDhrNetworks.gpkg'))
+df=gpd.read_file(os.path.join(infolder,'NHDhrNetworks_VAAtable.csv'))
 
 outletID= df['outletNHDid'].unique()
 Tk_df = pd.DataFrame()
@@ -139,6 +139,7 @@ for id0 in outletID[start:end]:
 # ===== S5. save the files ============
 # run on HPC cluster
 Tk_df.to_csv('Tk_df_v'+str(start)+'.csv',index=False)
+
 
 
 

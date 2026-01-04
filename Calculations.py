@@ -41,7 +41,7 @@ def junction_reprocess(df,orderfield):
     jundf = pd.DataFrame(records, columns=['FromNode', 'Tk_order','Strahler1','Strahler2','NHDPlusID1','NHDPlusID2'])
     return jundf
 
-def Tk_exclude_high_func(jundf,level,outletNHDid): 
+def Tk_func(jundf,level,outletNHDid): 
     Tk_c_df = []
     rsquared_df = []
     outletnhd = [outletNHDid]
@@ -145,7 +145,7 @@ for id0 in outletID[start:end]:
     networkjun=junction_reprocess(network,'StreamOrde')
 
     # === S4. calculate Tokunaga parameter c ===========
-    Tk_df0 = Tk_exclude_high_func(networkjun,strahler_order,id0)
+    Tk_df0 = Tk_func(networkjun,strahler_order,id0)
     Tk_df = pd.concat([Tk_df,Tk_df0])
     
 # ===== S5. save the files ============
@@ -172,3 +172,4 @@ Network_angles=sideangle.merge(biangle,on='outletNHDid',how='inner')
 Network_angles=Network_angles.merge(branchangle,on='outletNHDid',how='inner')
 
 Network_angles.to_csv('JunctionAngles.csv',index=False)
+

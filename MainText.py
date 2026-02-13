@@ -565,8 +565,8 @@ def main():
     axes = [fig.add_subplot(gs[r, c]) for r in rows for c in range(2)]
     axes = np.array(axes).reshape(2, 2)
     size0 = 36
-    palette1 = sns.color_palette("YlOrBr", n_colors=3)
-    palette2 = sns.color_palette("BuGn", n_colors=3)
+    palette1 = sns.color_palette("Blues", n_colors=3)
+    palette2 = sns.color_palette("Reds", n_colors=3)
 
     # Side-branching vs AI
     custom_bin_and_plot(dfplot1, 'meanAI_class', (0.5, 4.7), (32, 80), axes[0][0], palette1)
@@ -655,6 +655,7 @@ def main():
     
 if __name__ == '__main__':
     main()
+
 
 
 
